@@ -1,10 +1,11 @@
-import { FcSearch } from 'react-icons/fc';
+import PropTypes from 'prop-types';
 
-export const Button = () => {
-  return (
-    <button type="submit" className="SearchForm-button">
-      <FcSearch />
-      <span className="SearchForm-button-label">Search</span>
-    </button>
-  );
+export const Button = ({ onClick }) => (
+  <button type="button" className="Button" onClick={onClick}>
+    Load more
+  </button>
+);
+
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
